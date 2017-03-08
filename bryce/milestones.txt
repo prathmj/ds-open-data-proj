@@ -1,0 +1,5 @@
+Milestones:
+	I want to:
+		Spend about 1-2 hours researching the data on the South Bend Data website (10 Pts)
+		Create a python program that grabs info from the SB open data website (10 Pts)
+		Displaying the data that was scraped in a raw but understandable format (0 pts)
