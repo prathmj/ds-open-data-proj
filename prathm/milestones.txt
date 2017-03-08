@@ -1,0 +1,9 @@
+Prathm Juneja
+Milestones for spring break, final project
+
+Tasks I plan on completeing over break:
+
+- 1-2 hours of research on innovative solutions other cities have found using their open data (10 points)
+- Downloading/Scraping data from the South Bend open data platform using python. (10 points)
+- Displaying that data in a raw format, that makes it clear enough to understand the data (20 points)
+
