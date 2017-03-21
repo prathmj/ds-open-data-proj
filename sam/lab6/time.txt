@@ -1,0 +1,15 @@
+Sam Alptekin
+
+Time spent                  Description
+
+3/19/17 12:00 - 2:00pm      Worked on a C++ implementation of a web scraper, but
+        2 hours             quickly found that I did not entirely understand
+                            what I was coding. I completed a C++ implementation
+                            of the Unix curl command before switching to python.
+
+
+3/20/17 6:00 - 8:30pm       Created a scraper in Python that pulls back all the
+        2.5 hours           different databases and lets the user select which
+                            one they would like to see a description of. It then
+                            goes back to that database and grabs the description
+                            off of it to present to the user.
