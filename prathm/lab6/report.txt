@@ -1,0 +1,28 @@
+Prathm Juneja
+
+1. Evidence that you have checked in some code into your repository for your project:
+
+I created a repository and checked in the "dispdata.py" code to it, along with the csv file it needs to function. The files are checked in to a folder labeled "prathm". The repository can be looked at: https://github.com/prathmj/ds-open-data-proj
+
+I have also included the files in this folder. 
+
+2. Documentation:
+
+a. Timelog:
+
+3/15/2017 9:00pm - 10:45pm: Read parts of the book "A Lever and a Place to Stand: How Civic Tech can Transform Government"
+3/16/2017 7:00pm-10:00pm: Spent an irrational amount of time on civic technology blogs, exploring how local governments in Pittsburgh, San Francsisco, San Diego, and random smaller towns have used open data.
+3/17/2017 7:00pm - 8:30pm: Read about implementing csv files in python, and how to turn data into graphics/data visualizations. Started the basics for the dispdata.py file by downloading the csv file from the open data website.
+3/21/2017 3:00pm - 5:03pm: Finished programming dispdata.py script by rewriting the file open functionality, doing manual formatting, and adding comments.
+
+b. How dispdata.py works internally:
+    The dispdata.py script itself is pretty simple internally, it just required some research on understanding csv files and how they coordinate with open data platforms. For now, the program simply reads in .csv file that was donwloaded from the South Bend open data website, and then takes that data and displays it in a nice table.
+    
+    Internally, the program first prints out a description message, and then calls the function "opendatafile" which I define at the top of the code. The opendatafile function takes in one argument, the name of the csv file. It then uses the csv module to open the file and store it in a csv_reader object called "data". The code iterates through the first line, which is basically the titles of the table, and prints those with formatting. Then, it simply iterates through the rest of the data set, where each row is a list that was separated through using commas as delimiters. It prints these rows with | as a seperator, and space filled justification to make it a table.
+    
+3. "Show us what you learned."
+    I spent most of my time on the project simply immersing myself in the field of local government open data and civic technology. There's a lot of really incredible stuff that governments have done: Pittsburgh has implemented apps to help people report problems with city streets, some cities have found ways to use open data to analyze the quality of life of specific neighborhoods, and South Bend itself has used open data to build smarter streets in downtown to decrease traffic. The hours spent researching these tasks has really helped me and my team members understand the field, and we'll be meeting after all of us have lab to decide in on a really specific analytics portion of our project. Our initial idea was to simply better display the data given on the open data portal - which is why what I coded for this lab essentially is the first step towards that -  but some of the research I've done has shown we could have a greater impact using the education data to study inequalities, or work in other ways with specific data.
+    
+    So, in a general sense, I learned how cities use open data, and the gaps that South Bend has with this incredible platform. I'm now well versed in the civic tech websites that exist, and understand the not just the limits but also the potential all of this data has. 
+    
+    In a technical sense, I also spent a decent amount of time research data visualizations using python: which will be a tough but rewarding task when we start programming that portion. There are some really cool ways of taking large data sets and applying visual models to them, and I've started to study some of those modules. I also spent some time researching how to use csv files and GIS files in python, which is how we'll actually implement the data. It's really cool to see how small a csv file can be, and how simple the formatting is, but how much data it can really contain. That's super useful for us because it'll allow our code to be more universal and easily expandable. That's why I learned the csv module in python, and wrote my executable code to process and display that data.

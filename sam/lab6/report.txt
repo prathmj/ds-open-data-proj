@@ -1,0 +1,14 @@
+Sam Alptekin
+
+The time log is in time.txt and the github repository is:https://github.com/prathmj/ds-open-data-proj
+
+I found significant trouble implementing a web scraper in C++; at some point I
+felt as though I was simply copying code and didn't really understand it --
+especially when I was trying to store the website data in the program. When I
+switched to python, I was able to get a lot farther especially in parsing
+through the json data of the southbend open data site. Unfortunately, I could
+not figure out how to get the actual data out of the websites; all I could get
+was the metadata. I could determine how many records there were in a given table
+and what the data field names were, but I could not find any of the actual
+records in the json data. Thus, this is being pushed into a 'next step' phase
+of the project.
