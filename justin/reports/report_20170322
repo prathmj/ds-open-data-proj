@@ -1,0 +1,19 @@
+//Justin Garrard
+
+
+I will start this report by addressing the issues I highlighted in my milestones report last lab session. Then, I will describe my next steps.
+
+Before diving into it. The important thing to report first is that we now have an operational gitlab repository which all group members are pushing to. Now some project analysis.
+
+First, I have familiarized myself with South Bend's open data web portal. The home page is functional but not quite educational. A user with a specific civil interest or public research subject could navigate to the home page and probably navigate to a dataset of interest. The two ways to find a dataset are by searching for a keyword which might appear in the title of a dataset, or combing through a genre (culture, crime, education, etc.) for a dataset which might contain data of interest. The first mode is problematic in that a keyword search is only run across the names of the databases and not the data itself. So for instance, there are a number of community members involved in different aspects of community life, and if you wanted to build a network of community leaders and their influence you could not do so (easily) given the current way data is indexed. This means that keyword searching also might not return all the data relevant to your inquiry. The genre search seems well indexed, but it requires a lot of manual search on the user's behalf.
+
+The data is all being stored as csv files in the databases. I think ideally, we can index key value pairs of these data so that there is more relationality among the varios data points (in the example of exploring various community leaders). After indexing the data more intelligibly to provide more directional relations, it would be interesting to provide more information to users upon arrival at the open data page.
+
+I assume that someone has done something with these datasets before. Where do community members go to see their results? The open data concept it would seem, should contain a published aspect. This is where the flipboard concept would be interesting. Step 1 would be a simple blog of sorts, where users can publish their research to inform their fellow citizens. Step 2, and likely entirely out of the scope and feasibility of this project, would be a type of network analysis on the indexed data. An exploratory data analysis would definitely take more time and focus than we have for this project, but as an aspiring data scientist, I hope our efforts to format and represent the open data may enable others to conduct more complex data analysis such as the relation between infrastructure investment and economic growth, for example.
+
+I think data visualization is our best shot at doing something intuitive after re-indexing the open data. Currently, the web page offers simple data visualizations for the csv data (pretty much anything you can do in excel) and a sort of geographical map view. The map view is essentially a number of data points plotted on a map of south bend and linked together in a network. There's no evidence that this relationality actually represents something for all the datasets. What would be interesting is a heat map interface which could show differences in school district funding, reported crimes,  and infrastructure investments to name a few. data-visualization.org has open source data visualization software for exactly what we'd be interested in. We would have to format our data and interface it with their software. Perhaps we will select one of the topics mentioned before to complete a proof of concept for this data visualization aspect.
+
+We hope to have some sort of web scraping capability, data indexing, and rudimentary data visualization concept completed in the coming weeks.
+
+
+
