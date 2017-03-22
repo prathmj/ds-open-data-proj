@@ -1,0 +1,15 @@
+Bryce Badura
+
+1. Evidence that you have checked in some code into your repository for your project:
+I created a repository and checked in the "graphtry.py" code to it, along with the csv file it needs to function. The files are checked in to a folder labeled "bryce". The repository can be looked at: https://github.com/prathmj/ds-open-data-proj
+
+2. Documentation:
+
+a. Timelog:
+3/10/2017 19:30 - 21:00: Explored the depth of information available on the South Bend open data website, as Prathm has previously done work with South Bend, but I had not. It exposed me to the level of data that we could use to better connect with the community or model to provide insight to the city of South Bend.
+3/11/2017 8:00 - 9:00:   Explored the functionality and capabilities of matplotlib that we might use in displaying information. This is a good "program" for grpahing since it uses CSV which are prominent of the South Bend open data site.
+3/20/2017 22:00 - 23:00: Reviewed some of the material the Prathm recommended on governemnt, tech, and open data.
+3/21/2017 21:40 - 22:30: Wrote the program that is included with this report, graphtry.py. The majority of this programming time was downloading PIP and then downloading the graphing library.
+
+b. How graphtry.py works internally:
+
