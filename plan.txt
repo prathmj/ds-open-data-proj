@@ -1,0 +1,10 @@
+"Make City Government Transparent"
+
+- A means to take in Minutes, run Natural Language Processing 
+on them, and summarizes them.
+- A means to take those summaries and push them somewhere    
+- A means to take political/local issues that are inputted by citizens 
+and send them to relevant politicians/city council people
+- A means to display all of these on a webserver/website
+
+
