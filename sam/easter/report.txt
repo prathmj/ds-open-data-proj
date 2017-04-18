@@ -1,0 +1,42 @@
+Sam Alptekin Easter Break Report/Time-Log
+
+Wednesday 4/12 3pm - 4pm        Met with team to discuss the trajectory of the
+                                project and determine specific responsibilities.
+
+Saturday 4/15 3pm - 5pm         I analyzed code that a teammate in the Hesburgh
+                                Hackathon wrote that parses text into sentances
+                                and from there into words.
+
+Monday 4/17 7pm - 9pm           I analyzed code that Justin Garrard and I wrote
+                                for the Hesburgh Hackathon that directly relates
+                                to this project and worked on adapting it to fit
+                                the specific needs of this project.
+
+
+For this project, I will be working on a Natural Language Processing (NLP) 
+algorithm, Term Frequency - Inverse Document Frequency (TF-IDF) to determine 
+which sentences are important to a document in order to accurately and 
+efficiently summarize large blocks of text. This algorithm works by taking a 
+large set of documents and taking the frequency every word appears accross 
+those documents and relating to how often the word appears in a specific 
+document. The TF, or term frequency, is a simple score that represents how often
+a word appears in the document in question. In general, a word that appears 
+often is important to the document, but the word "the" appears often in every 
+document and tells us nothing about what the document is about. This issue is 
+resolved by the IDF component of TF-IDF which determines how often words appear
+accross a large set of documents. A word that appears in many documents is 
+considered unimportant, but a word that appears in few, or none, is considered 
+very important. For instance, the word "this" will most likely appear in 100/100
+documents, meaning it is an unimportant word; however, the word "Notre" will 
+probably appear in 1/100 documents, making it a potentially important word. 
+Therefore, a word that appears often in the target document and very 
+infrequently in the collection of documents has a high TF score, a high 
+IDF score, and therefore has a high TF-IDF score, meaning it is important.
+
+My component of the project will generate keywords based on TF-IDF scores of the
+document in question and use those keywords to rank sentences in the target 
+document. It will then return a handful of sentences from the target document 
+that have the highest ranking and will therefore contain the most important 
+information. The sentances will be scored based on how many keywords appear 
+in the sentance, how important those keywords are, and how many times those 
+keywords have already appeared in sentances that have already been chosen.
