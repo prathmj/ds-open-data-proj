@@ -21,7 +21,7 @@
         <div id="signup">   
           <h1>Sign Up Today!</h1>
           
-          <form action="php/register.php" method="post">
+          <form action="php/signup.php" method="post">
           
           <div class="top-row">
             <div class="field-wrap">
@@ -52,6 +52,18 @@
             </label>
             <input type="password" name = "PASSWRD" required autocomplete="off"/>
           </div>
+
+          <div class="field-wrap">
+            <select class="req" name = "CCMEMB" required autocomplete="off">
+              <option value = 0>Choose your City Council Member</option>
+              <option value = 1>Tim Scott, 1st District</option>
+              <option value = 2>Regina Williams-Preston, 2nd District</option>
+              <option value = 3>Randy Kelly, 3rd District</option>
+              <option value = 4>Jo M. Broden, 4th District</option>
+              <option value = 5>Dr. David Varner (R), 5th District</option>
+              <option value = 6>Oliver Davis, 6th District</option>
+            </select>
+          </div>
           
           <button type="submit" class="button button-block"/>Get Started</button>
           
@@ -62,20 +74,20 @@
         <div id="login">   
           <h1>Welcome Back!</h1>
           
-          <form action="/" method="post">
+          <form action="php/login.php" method="post">
           
             <div class="field-wrap">
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="email" name = "EMAIL" required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input type="password" name = "PASSWRD" required autocomplete="off"/>
           </div>
           
           <p class="forgot"><a href="#">Forgot Password?</a></p>

@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background: url(http://www.hcc-nd.edu/wp-content/uploads/2015/08/South-Bend-riverwalk.jpg);
+  background: url(http://www.hcc-nd.edu/wp-content/uploads/2015/08/South-Bend-riverwalk.jpg) no-repeat center center fixed;
   background-size: cover;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;

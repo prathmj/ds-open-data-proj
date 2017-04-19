@@ -1,0 +1,197 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../images/crossword.png);
+  background-repeat: repeat;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.jumbotron {
+  background: url(http://www.eatdrinkdtsb.com/wp-content/uploads/2015/04/south-bend-downtown_pano_hero.jpg) no-repeat center center;
+  background-size: cover;
+  height: 80px;
+}
+
+.main {
+  position: relative;
+  top: 0px;
+  text-align: center;
+}
+
+.main h1 {
+  color: #FFF;
+  text-shadow: 2px 2px #ff0000;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+  margin-top: 0;
+  margin-bottom: 95px;
+  text-transform: uppercase;
+}
+
+.left {
+  width: 49%;
+  float: left;
+  border-right: 2px dashed;
+}
+
+.left h2 {
+  font-family: Raleway;
+  font-weight: 900;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#name {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 44px;
+}
+
+.left img {
+  height: 40%;
+  width: 40%;
+  border-radius: 25px;
+  display: block;
+  margin: auto;
+}
+
+.left #bio {
+  margin: 15px;
+  height: 300px;
+  overflow: scroll;
+  border-radius: 20px;
+}
+
+.left p {
+  text-indent: 1.5em;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.right {
+  width: 50%;
+  float: left;
+}
+
+.right h2 {
+  font-family: Raleway;
+  font-weight: 900;
+  font-size: 26px;
+  text-align: center;
+  margin-top: 37px;
+}
+
+.right textarea {
+  font-family: Raleway;
+  font-size: 14px;
+  width: 70%;
+  padding: 0 0 240px 0;
+  line-height: 1em;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 2px solid #a0b3b0;
+}
+
+#minutes {
+  margin-left: 20px;
+}
+
+#minutes h2 {
+  font-family: Raleway;
+  font-weight: 900;
+  font-size: 26px;
+  text-align: left;
+  margin: 0;
+  margin-top: 60px;
+  padding: 0;
+}
+
+#minutes h3 {
+  font-family: Raleway;
+  font-weight: 900;
+  font-size: 16px;
+  font-style: italic;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+#minutes h4 {
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: left;
+}
+
+#minutes ul {
+  margin: 0;
+}
+
+#minutes li {
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
+}
+
+#listminutes {
+  height: 244px;
+  overflow: scroll;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 15px;
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #000;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+.button:hover, .button:focus {
+  background: #1c35a0;
+}
+
+.button-block {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.footer p {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+}
