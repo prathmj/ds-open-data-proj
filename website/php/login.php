@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $db_user = 'root';
 $db_pass = '';
@@ -37,7 +38,8 @@ SQL;
 		die('There was an error running the query [' . $mysqli->error . ']');
 	}
 
-	$ccmemb = $result;
+	$row = $result->fetch_assoc();
+	$ccmemb = $row['CCMEMB'];
 
 	switch($ccmemb) {
 		case 1:

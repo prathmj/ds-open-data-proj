@@ -12,25 +12,34 @@ if ($mysqli->connect_errno) {
     die('Unable to connect to database [' . $db->connect_error . ']');
 }
 
-$first = $mysqli->real_escape_string($_POST['FIRSTNAME']);
-$last = $mysqli->real_escape_string($_POST['LASTNAME']);
-$email = $mysqli->real_escape_string($_POST['EMAIL']);
-$pass = $mysqli->real_escape_string($_POST['PASSWRD']);
-$ccm = $mysqli->real_escape_string($_POST['CCMEMB']);
-$iccm = (int)$ccm;
+$email = $mysqli->real_escape_string($_SESSION['EMAIL']);
+$message = $mysqli->real_escape_string($_POST['MESSAGE']);
 
 $sql = <<<SQL
-	INSERT INTO users (FIRSTNAME, LASTNAME, EMAIL, CCMEMB, PASSWRD) 
-	VALUES ('$first','$last','$email',$iccm,'$pass')
+	UPDATE users
+	SET MESSAGE = '$message' 
+	WHERE EMAIL = '$email';
 SQL;
 
 if (!$result = $mysqli->query($sql)) {
 	die('There was an error running the query [' . $mysqli->error . ']');
 }
 
-$_SESSION['EMAIL'] = $email;
+exec("../emails.py '$email'");
 
-switch($iccm) {
+$sql2 = <<<SQL
+		SELECT CCMEMB FROM users
+		WHERE EMAIL = '$email'
+SQL;
+
+if (!$result = $mysqli->query($sql2)) {
+		die('There was an error running the query [' . $mysqli->error . ']');
+	}
+
+	$row = $result->fetch_assoc();
+	$ccmemb = $row['CCMEMB'];
+
+	switch($ccmemb) {
 		case 1:
 			header("Location: ../scott.html");
 			break;
@@ -53,5 +62,4 @@ switch($iccm) {
 			header("Location: ../login.html");
 			break;
 	}
-
 ?>
