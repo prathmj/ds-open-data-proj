@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $db_user = 'root';
 $db_pass = '';
@@ -26,5 +27,31 @@ SQL;
 if (!$result = $mysqli->query($sql)) {
 	die('There was an error running the query [' . $mysqli->error . ']');
 }
+
+$_SESSION['EMAIL'] = $email;
+
+switch($iccm) {
+		case 1:
+			header("Location: ../scott.html");
+			break;
+		case 2:
+			header("Location: ../williams-preston.html");
+			break;
+		case 3:
+			header("Location: ../kelly.html");
+			break;
+		case 4:
+			header("Location: ../broden.html");
+			break;
+		case 5:
+			header("Location: ../varner.html");
+			break;
+		case 6:
+			header("Location: ../davis.html");
+			break;
+		default:
+			header("Location: ../login.html");
+			break;
+	}
 
 ?>
