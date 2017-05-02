@@ -1,20 +1,50 @@
 #!/usr/bin/env python2.7
 
-import PyPDF2
-import requests
+"""
+I found this function online at http://stackoverflow.com/questions/26494211/extracting-text-from-a-pdf-file-using-pdfminer-in-python but the driver at the bottom was written by me.
+"""
 
 import os
 
 
-URL = "http://docs.southbendin.gov/WebLink/PDF/qrr4qmmutv5ow4tnxxodzfng/4/04-14-14%20Common%20Council%20Meeting%20Minutes.pdf"
+from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.converter import TextConverter
+from pdfminer.layout import LAParams
+from pdfminer.pdfpage import PDFPage
+from cStringIO import StringIO
 
-document = requests.get(URL)
+def convert_pdf_to_txt(path):
+    rsrcmgr = PDFResourceManager()
+    retstr = StringIO()
+    codec = 'utf-8'
+    laparams = LAParams()
+    device = TextConverter(rsrcmgr, retstr, codec=codec, laparams=laparams)
+    fp = file(path, 'rb')
+    interpreter = PDFPageInterpreter(rsrcmgr, device)
+    password = ""
+    maxpages = 0
+    caching = True
+    pagenos=set()
 
-print document.status_code
+    for page in PDFPage.get_pages(fp, pagenos, maxpages=maxpages, password=password,caching=caching, check_extractable=True):
+        interpreter.process_page(page)
 
-with open("bandaid.pdf", "wb") as f:
-    f.write(document.content)
+    text = retstr.getvalue()
 
-pdf = PyPDF2.PdfFileReader("bandaid.pdf")
-for page in pdf.pages:
-    print page.extractText()
+    fp.close()
+    device.close()
+    retstr.close()
+    return text
+
+
+
+pdfs = "./newpdfs/"
+texts = "./newtexts/"
+for root, dirs, files in os.walk(pdfs):
+    for filename in files:
+        text = texts + filename + ".txt"
+        pdf = pdfs + filename
+        print "ripping ", pdf, "..."
+
+        with open(text, 'w') as f:
+            f.write(convert_pdf_to_txt(pdf))
