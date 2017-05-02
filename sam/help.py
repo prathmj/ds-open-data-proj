@@ -44,5 +44,7 @@ for root, dirs, files in os.walk(pdfs):
     for filename in files:
         text = texts + filename + ".txt"
         pdf = pdfs + filename
+        print "ripping ", pdf, "..."
+
         with open(text, 'w') as f:
             f.write(convert_pdf_to_txt(pdf))
