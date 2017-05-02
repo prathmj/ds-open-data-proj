@@ -38,8 +38,8 @@ def convert_pdf_to_txt(path):
 
 
 
-pdfs = "./pdfs/"
-texts = "./texts/"
+pdfs = "./newpdfs/"
+texts = "./newtexts/"
 for root, dirs, files in os.walk(pdfs):
     for filename in files:
         text = texts + filename + ".txt"
