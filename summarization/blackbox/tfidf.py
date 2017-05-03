@@ -1,8 +1,6 @@
 #!/usr/bin/env python2.7
 
 import math                         # so we can do math
-#import requests                     # to get the wikipedia page
-import re                           # to search the wikipedia page
 
 def idf(term, collection):          # inverse document frequency for term
 
