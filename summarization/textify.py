@@ -40,11 +40,11 @@ def convert_pdf_to_txt(path):
 
 pdfs = "./newpdfs/"
 texts = "./newtexts/"
-for root, dirs, files in os.walk(pdfs):
-    for filename in files:
-        text = texts + filename + ".txt"
-        pdf = pdfs + filename
-        print "ripping ", pdf, "..."
+for root, dirs, files in os.walk(pdfs):         # get a list of files in pdfs
+    for filename in files:                      # for every file in that list
+        text = texts + filename + ".txt"        # the path to write to
+        pdf = pdfs + filename                   # the path to read from
+        print "ripping ", pdf, "..."            # for readibility when running
 
-        with open(text, 'w') as f:
-            f.write(convert_pdf_to_txt(pdf))
+        with open(text, 'w') as f:              # open the file to write to
+            f.write(convert_pdf_to_txt(pdf))    # use the function to convert
