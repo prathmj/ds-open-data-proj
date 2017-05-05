@@ -10,14 +10,17 @@ import string
 reg2 = string.ascii_lowercase
 
 path = "./texts/"
-count = 0
-finalDict = {}
+count = 0       #count of documents analyzed
+finalDict = {}  #index every word in every document
 
 for root, direc, files in os.walk(path):
+    #Analyze every file in ./texts
     for filename in files:
         filename = path+filename
+        #words will contain every word within a single document
         words = set()
         count = count + 1
+        #open file and read in words
         with open(filename, 'r') as f:
             for line in f:
                 line = line.split(" ")
@@ -42,6 +45,7 @@ for root, direc, files in os.walk(path):
             else:
 	        finalDict[word] = 1
 
+#write indexing to a master dictionary to be used in later tfidf calculations
 with open("./blackbox/dict.txt", 'w') as z:
     for k,v in finalDict.items():
         z.write("{} {}\n".format(k,v))
